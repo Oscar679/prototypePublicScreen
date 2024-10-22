@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+html {
+    font-size: 20px;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "col1 col2 col3";
+}
+
+#firstSection {
+    grid-area: col1;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#secondSection {
+    grid-area: col2;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#thirdSection {
+    grid-area: col3;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}

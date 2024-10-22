@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+section article {
+
+    flex-grow: 1;
+    padding: 15px;
+    color: white;
+}
+
+#firstSection article:nth-child(1) {
+    background-color: #3c7bbaba;
+}
+
+#firstSection article:nth-child(2) {
+    background-color: #3c7bba6f;
+}
+
+#secondSection article:nth-child(1) {
+    background-image: url('img/nrgvh03b.bmp');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+#secondSection article:nth-child(2) {
+    background-color: #3c7bba6f;
+    height: 60%;
+}
+
+#secondSection article:nth-child(3) {
+    background-image: url('img/x4xacero.bmp');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+#thirdSection article:nth-child(1) {
+    background-color: #3c7bba;
+}
+
+#thirdSection article:nth-child(2) {
+    background-color: #3c7bbaba;
+}
+
+#thirdSection article:nth-child(3) {
+    background-color: #3c7bba6f;
+}
+
+/*
+#thirdSection > article:nth-child(3) {
+    background-image: url('img/158420.png');
+    background-repeat: no-repeat;
+    background-size: 150px;
+}*/
+
+header {
+    text-align: center;
+    font-size: 32px;
+}
+
+#heartImg {
+    width: 40%;
+    margin-left: 32%;
+    animation: pulse 1s infinite;
+}
+
+#counter {
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: -400px;
+}
+
+#headerCounter {
+    margin-bottom: -45px;
+}
+
+/*
+#participants {
+    width: 80%;
+    margin-left: 12%;
+    margin-top: 80px;
+}*/
+
+#participateBtn {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-size: 60px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: block;
+    margin: 100px auto -100px;
+    animation: pulse 2s infinite;
+    width: 50%;
+}
+
+#participateBtn img {
+    vertical-align: middle;
+    width: 10%;
+}
+
+p {
+    font-size: 24px;
+    text-align: center;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
