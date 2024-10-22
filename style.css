@@ -7,6 +7,18 @@ section article {
     color: white;
 }
 
+#firstSection img {
+    width: 50%;
+    display: block;
+    margin: 60px auto -90px;
+}
+
+#secondSection img {
+    width: 70%;
+    display: block;
+    margin: 60px auto -90px;
+}
+
 #firstSection article:nth-child(1) {
     background-color: #3c7bbaba;
 }
@@ -16,22 +28,18 @@ section article {
 }
 
 #secondSection article:nth-child(1) {
-    background-image: url('img/nrgvh03b.bmp');
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background-color: #3c7bbadc;
     height: 100%;
 }
 
 #secondSection article:nth-child(2) {
     background-color: #3c7bba6f;
-    height: 60%;
+    height: 80%;
 }
 
 #secondSection article:nth-child(3) {
-    background-image: url('img/x4xacero.bmp');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 100%;
+    background-color: #3c7bba;
+    height: 84%;
 }
 
 #thirdSection article:nth-child(1) {
@@ -70,26 +78,31 @@ header {
     margin-bottom: -400px;
 }
 
+#counterYesterday {
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 #headerCounter {
     margin-bottom: -45px;
 }
 
-/*
-#participants {
-    width: 80%;
-    margin-left: 12%;
-    margin-top: 80px;
-}*/
+#resElem p {
+    margin-top: 140px;
+    margin-left: 140px;
+    color: black;
+}
 
 #participateBtn {
     background-color: white;
-    color: black;
+    color: #3c7bbade;
     padding: 10px 20px;
     font-size: 60px;
     border-radius: 15px;
     cursor: pointer;
     display: block;
-    margin: 100px auto -100px;
+    margin: 50px auto -100px;
     animation: pulse 2s infinite;
     width: 50%;
 }
@@ -111,7 +124,7 @@ p {
     }
 
     50% {
-        transform: scale(1.1);
+        transform: scale(1.125);
     }
 
     100% {
