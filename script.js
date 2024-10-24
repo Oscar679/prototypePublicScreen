@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     getData();
     compareParticipation();
+    startCountdown();
 
     function addToCounter() {
         let currentCounter = counter.textContent;
@@ -17,6 +18,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         saveData(currentCounter);
         compareParticipation();
+        feedbackAnimation();
+    }
+
+    function feedbackAnimation() {
+        console.log("test");
+        let loaderId = document.querySelector("#loaderId");
+        loaderId.classList.remove("loader--hidden");
+        loaderId.classList.add("loader");
+
+        setTimeout(() => {
+            loaderId.classList.add("loader--hidden");
+        }, 2000);
     }
 
     function saveData(currentCounter) {
@@ -41,5 +54,27 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             resElem.innerHTML = "<p>" + "Det behvös endast " + difference + " deltagare till för att slå gårdagens resultat!" + "</p>";
         }
+    }
+
+    function startCountdown() {
+        var now = new Date().getTime();
+        var countDownDate = now + 24 * 60 * 60 * 1000;
+
+        var x = setInterval(() => {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            if (distance <= 0) {
+                clearInterval(x);
+                startCountdown();
+                return;
+            }
+
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+        }, 1000);
     }
 });

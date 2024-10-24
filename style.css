@@ -3,14 +3,19 @@
 section article {
 
     flex-grow: 1;
-    padding: 15px;
     color: white;
 }
 
-#firstSection img {
-    width: 50%;
+#dumbbellImg {
+    width: 38%;
     display: block;
-    margin: 60px auto -90px;
+    margin: 10px auto 25px;
+}
+
+#clockImg {
+    width: 25%;
+    display: block;
+    margin: 10px auto -90px;
 }
 
 #secondSection img {
@@ -92,6 +97,7 @@ header {
     margin-top: 140px;
     margin-left: 140px;
     color: black;
+    animation: fadeIn 1s;
 }
 
 #participateBtn {
@@ -100,10 +106,10 @@ header {
     padding: 10px 20px;
     font-size: 60px;
     border-radius: 15px;
+    border: none;
     cursor: pointer;
     display: block;
-    margin: 50px auto -100px;
-    animation: pulse 2s infinite;
+    margin: 20px auto -100px;
     width: 50%;
 }
 
@@ -116,6 +122,30 @@ p {
     font-size: 24px;
     text-align: center;
 }
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    z-index: 999;
+}
+
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+
 
 
 @keyframes pulse {
