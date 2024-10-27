@@ -1,24 +1,53 @@
 document.addEventListener("DOMContentLoaded", function () {
     let participateBtn = document.querySelector("#participateBtn");
-    let counter = document.querySelector("#counter");
-    let counterYesterday = document.querySelector("#counterYesterday");
+    let counter;
     let resElem = document.querySelector("#resElem");
 
     participateBtn.addEventListener("click", addToCounter);
 
+    const counterYesterday = 309;
+    const ctx = document.getElementById('myChart');
+
+    const participationChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Igår', 'Idag'],
+            datasets: [{
+                label: 'Antal deltagare',
+                data: [counterYesterday],
+                borderWidth: 1,
+                backgroundColor: '#F2FFFFFF',
+                borderColor: 'black',
+                
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
     getData();
     compareParticipation();
     startCountdown();
+    updateChart(counter);
 
     function addToCounter() {
-        let currentCounter = counter.textContent;
-        currentCounter++;
-        console.log(currentCounter);
-        counter.textContent = currentCounter;
+        counter++;
 
-        saveData(currentCounter);
+        saveData(counter);
         compareParticipation();
         feedbackAnimation();
+        updateChart(counter);
+    }
+
+    function updateChart(counter) {
+        console.log(counter);
+        participationChart.data.datasets[0].data[1] = counter;
+        participationChart.update();
     }
 
     function feedbackAnimation() {
@@ -29,11 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         setTimeout(() => {
             loaderId.classList.add("loader--hidden");
-        }, 2000);
+        }, 1000);
     }
 
-    function saveData(currentCounter) {
-        let dataStr = encodeURIComponent(currentCounter);
+    function saveData(counter) {
+        let dataStr = encodeURIComponent(counter);
         localStorage.setItem("counterData", dataStr);
     }
 
@@ -41,11 +70,11 @@ document.addEventListener("DOMContentLoaded", function () {
         let dataStr = localStorage.getItem("counterData");
         if (dataStr == null) return;
 
-        counter.textContent = dataStr;
+        counter = dataStr;
     }
 
     function compareParticipation() {
-        let difference = parseInt(counterYesterday.textContent) - parseInt(counter.textContent);
+        let difference = counterYesterday - counter;
         console.log(difference);
         console.log
         if (difference <= 0 || difference == null) {

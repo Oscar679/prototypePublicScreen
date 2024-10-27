@@ -39,11 +39,11 @@ section article {
 
 #secondSection article:nth-child(2) {
     background-color: #3c7bba6f;
-    height: 80%;
+    height: 15%;
 }
 
 #secondSection article:nth-child(3) {
-    background-color: #3c7bba;
+    background-color: #3c7bbaad;
     height: 84%;
 }
 
@@ -94,7 +94,7 @@ header {
 }
 
 #resElem p {
-    margin-top: 140px;
+    margin-top: 20px;
     margin-left: 140px;
     color: black;
     animation: fadeIn 1s;
