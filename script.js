@@ -17,14 +17,35 @@ document.addEventListener("DOMContentLoaded", function () {
                 data: [counterYesterday],
                 borderWidth: 1,
                 backgroundColor: '#F2FFFFFF',
-                borderColor: 'black',
-                
+                barThickness: 100,
+                color: 'black'
             }]
         },
         options: {
             scales: {
                 y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    ticks: {
+                        color: 'white'
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: 'white',
+                        font: {
+                            size: '35'
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        color: 'white',
+                        font: {
+                            size: 13
+                        }
+                    }
                 }
             }
         }
