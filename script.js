@@ -47,6 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
                         }
                     }
                 }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
             }
         }
     });
@@ -79,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         setTimeout(() => {
             loaderId.classList.add("loader--hidden");
-        }, 1000);
+        }, 2000);
     }
 
     function saveData(counter) {

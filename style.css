@@ -59,6 +59,10 @@ section article {
     background-color: #3c7bba6f;
 }
 
+.toggleBenefits {
+    display: none;
+}
+
 /*
 #thirdSection > article:nth-child(3) {
     background-image: url('img/158420.png');
@@ -144,9 +148,6 @@ p {
     visibility: hidden;
     display: none;
 }
-
-
-
 
 @keyframes pulse {
     0% {
