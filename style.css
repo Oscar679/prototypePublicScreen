@@ -7,21 +7,30 @@ section article {
 }
 
 #dumbbellImg {
-    width: 38%;
+    width: 34%;
     display: block;
     margin: 10px auto 25px;
 }
 
 #clockImg {
-    width: 25%;
+    width: 22%;
     display: block;
-    margin: 10px auto -90px;
+    margin: 10px auto -50px;
 }
 
 #secondSection img {
     width: 70%;
     display: block;
     margin: 60px auto -90px;
+}
+
+#activityDiv {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.leftBtn {
+
 }
 
 #firstSection article:nth-child(1) {
@@ -47,8 +56,9 @@ section article {
     height: 84%;
 }
 
-#thirdSection article:nth-child(1) {
+#thirdSecArticle {
     background-color: #3c7bba;
+    flex: 0.1;
 }
 
 #thirdSection article:nth-child(2) {
@@ -60,8 +70,42 @@ section article {
 }
 
 .toggleBenefits {
-    display: none;
+    width: 19%;
+    height: 170px;
+    overflow: hidden;
+    transition: transform 2s ease;
+    position: relative;
+    transform: translateX(100%);
+    right: -82%;
+    margin: 30px 0px;
+    box-shadow: 4px 3px 9px 7px black;
+    animation: jiggle 2s ease-in-out infinite;
 }
+
+.toggleBenefits.visible {
+    right: -30px;
+    width: 80%;
+    animation: slideIn 1s forwards;
+    white-space: normal;
+}
+
+.toggleBenefits.slideBack {
+    animation: slideBack 1s forwards;
+}
+
+#benefitContainer {
+    background-color: #3c7bba6f;
+    flex: 1;
+    overflow: hidden;
+}
+
+/*
+#arrows {
+    width: 5%;
+    margin-top: 65px;
+    margin-left: 340px;
+    position: absolute;
+}*/
 
 /*
 #thirdSection > article:nth-child(3) {
@@ -98,8 +142,8 @@ header {
 }
 
 #resElem p {
-    margin-top: 20px;
-    margin-left: 140px;
+    margin-top: 10px;
+    margin-left: 120px;
     color: black;
     animation: fadeIn 1s;
 }
@@ -113,7 +157,7 @@ header {
     border: none;
     cursor: pointer;
     display: block;
-    margin: 20px auto -100px;
+    margin: 10px auto -100px;
     width: 50%;
 }
 
@@ -125,6 +169,7 @@ header {
 p {
     font-size: 24px;
     text-align: center;
+    padding: 5px;
 }
 
 .loader {
@@ -160,5 +205,45 @@ p {
 
     100% {
         transform: scale(1);
+    }
+}
+
+@keyframes jiggle {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}
+
+@keyframes slideBack {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%)
     }
 }

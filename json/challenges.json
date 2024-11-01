@@ -1,0 +1,17 @@
+{
+    "activities": "Dagens aktivitet",
+    "activity": [
+        {
+            "description": "<p>TA TRAPPORNA ISTÄLLET FÖR HISSEN <br><br>ANTA UTAMNINGEN FÖR ATT TA DEL AV HÄLSOFÖRDELARNA</p>"
+        },
+        {
+            "description": "<p>GÅ EN KORT PROMENAD UNDER LUNCHEN <br><br>FÅ ENERGIKICK OCH BÄTTRE FOKUS FÖR RESTEN AV DAGEN</p>"
+        },
+        {
+            "description": "<p>GÖR 20 KNÄBÖJ UNDER EN PAUS <br><br>STÄRK BEN OCH KÄNSLA AV UPPFRISKANDE AKTIVITET</p>"
+        },
+        {
+            "description": "<p>TA EN PROMENAD PÅ 5 MINUTER VARJE 30 MINUT <br><br>ÖKA CIRKULATIONEN OCH SLIPP STELHET</p>"
+        }
+    ]
+}
