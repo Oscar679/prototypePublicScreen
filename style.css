@@ -7,15 +7,15 @@ section article {
 }
 
 #dumbbellImg {
-    width: 34%;
+    width: 20%;
     display: block;
-    margin: 10px auto 25px;
+    margin: 2px auto 25px;
 }
 
 #clockImg {
-    width: 22%;
+    width: 18%;
     display: block;
-    margin: 10px auto -50px;
+    margin: 10px auto -90px;
 }
 
 #secondSection img {
@@ -29,8 +29,27 @@ section article {
     margin-right: 50px;
 }
 
-.leftBtn {
+.strong {
+    font-size: 40px;
+    font-weight: 1000;
+}
 
+.activityContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.leftBtn, .rightBtn {
+    flex-shrink: 0;
+    background-color: #3c7bbaba;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 34px;
+    margin: 4px;
 }
 
 #firstSection article:nth-child(1) {
@@ -70,13 +89,14 @@ section article {
 }
 
 .toggleBenefits {
-    width: 19%;
-    height: 170px;
+    width: 200px;
+    height: 140px;
     overflow: hidden;
+    text-wrap: nowrap;
     transition: transform 2s ease;
     position: relative;
     transform: translateX(100%);
-    right: -82%;
+    right: -78%;
     margin: 30px 0px;
     box-shadow: 4px 3px 9px 7px black;
     animation: jiggle 2s ease-in-out infinite;
@@ -98,21 +118,6 @@ section article {
     flex: 1;
     overflow: hidden;
 }
-
-/*
-#arrows {
-    width: 5%;
-    margin-top: 65px;
-    margin-left: 340px;
-    position: absolute;
-}*/
-
-/*
-#thirdSection > article:nth-child(3) {
-    background-image: url('img/158420.png');
-    background-repeat: no-repeat;
-    background-size: 150px;
-}*/
 
 header {
     text-align: center;
@@ -159,11 +164,6 @@ header {
     display: block;
     margin: 10px auto -100px;
     width: 50%;
-}
-
-#participateBtn img {
-    vertical-align: middle;
-    width: 10%;
 }
 
 p {
