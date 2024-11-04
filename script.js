@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     let participateBtn = document.querySelector("#participateBtn");
-    let counter = 147;
+    let counter = 0;
     let resElem = document.querySelector("#resElem");
 
     participateBtn.addEventListener("click", addToCounter);
@@ -147,16 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
         participationChart.update();
     }
 
-    function feedbackAnimation() {
-        console.log("test");
-        let loaderId = document.querySelector("#loaderId");
-        loaderId.classList.remove("loader--hidden");
-        loaderId.classList.add("loader");
-
-        setTimeout(() => {
-            loaderId.classList.add("loader--hidden");
-        }, 2000);
-    }
+   
 
     function saveData(counter) {
         let dataStr = encodeURIComponent(counter);
