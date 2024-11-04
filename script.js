@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function getData() {
         let dataStr = localStorage.getItem("counterData");
-        if (dataStr == null) return;
+      //  if (dataStr == null) return;
 
         counter = dataStr;
     }
