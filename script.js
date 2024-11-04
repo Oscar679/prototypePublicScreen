@@ -142,12 +142,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateChart(counter) {
-        console.log(counter);
         participationChart.data.datasets[0].data[1] = counter;
         participationChart.update();
     }
 
-   
+    function feedbackAnimation() {
+        let loaderId = document.querySelector("#loaderId");
+        loaderId.classList.remove("loader--hidden");
+        loaderId.classList.add("loader");
+
+        setTimeout(() => {
+            loaderId.classList.add("loader--hidden");
+        }, 2000);
+    }
 
     function saveData(counter) {
         let dataStr = encodeURIComponent(counter);
@@ -163,8 +170,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function compareParticipation() {
         let difference = counterYesterday - counter;
-        console.log(difference);
-        console.log
         if (difference <= 0 || difference == null) {
             resElem.innerHTML = "";
             return;
