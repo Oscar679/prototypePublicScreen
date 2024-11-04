@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     let participateBtn = document.querySelector("#participateBtn");
-    let counter;
+    let counter = 0;
     let resElem = document.querySelector("#resElem");
 
     participateBtn.addEventListener("click", addToCounter);
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function getData() {
         let dataStr = localStorage.getItem("counterData");
-      //  if (dataStr == null) return;
+        if (dataStr == null) return;
 
         counter = dataStr;
     }
