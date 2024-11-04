@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     let participateBtn = document.querySelector("#participateBtn");
-    let counter = 0;
+    let counter = 147;
     let resElem = document.querySelector("#resElem");
 
     participateBtn.addEventListener("click", addToCounter);
