@@ -16,8 +16,8 @@
     ],
     "healthBenefits": "Hälsofördelar",
     "benefits": [
-       {
-            "description":  "<p>ÖKAD ALLMÄN LYCKA</p>"
+        {
+            "description": "<p>ÖKAD ALLMÄN LYCKA</p>"
         },
         {
             "description": "<p>MINSKAD RISK FÖR HJÄRTPROBLEM</p>"
