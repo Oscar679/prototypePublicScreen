@@ -13,5 +13,20 @@
         {
             "description": "<p>TA EN PROMENAD PÅ 5 MINUTER VARJE 30:E MINUT I TVÅ TIMMAR<br><br>MINSKA STELHETEN</p>"
         }
+    ],
+    "healthBenefits": "Hälsofördelar",
+    "benefits": [
+       {
+            "description":  "<p>ÖKAD ALLMÄN LYCKA</p>"
+        },
+        {
+            "description": "<p>MINSKAD RISK FÖR HJÄRTPROBLEM</p>"
+        },
+        {
+            "description": "<p>MINSKAD STELHET</p>"
+        },
+        {
+            "description": "<p>MINSKAD STRESS OCH ORO</p>"
+        }
     ]
 }

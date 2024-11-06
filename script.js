@@ -9,37 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
     let activityList = [];
     let activityDiv = document.querySelector("#activityDiv");
 
+    let benefitIx = 0;
+    let benefitList = [];
+    let healthDiv = document.querySelector("#healthDiv");
+
     const counterYesterday = 309;
     const ctx = document.getElementById('myChart');
-
-    const eachBenefit = document.querySelectorAll(".toggleBenefits");
-
-    eachBenefit.forEach(benefit => {
-        benefit.addEventListener("click", toggleBenefits);
-    });
-
-    function toggleBenefits() {
-        if (this.classList.contains("visible")) {
-            this.classList.remove("slideIn");
-            this.classList.add("slideBack");
-
-            setTimeout(() => {
-                this.classList.remove("visible", "slideBack");
-            }, 4000);
-        } else {
-            this.classList.remove("slideBack");
-            this.classList.add("visible", "slideIn");
-
-            setTimeout(() => {
-                this.classList.remove("slideIn");
-                this.classList.add("slideBack");
-
-                setTimeout(() => {
-                    this.classList.remove("visible", "slideBack");
-                }, 1000);
-            }, 4000);
-        }
-    }
 
     const participationChart = new Chart(ctx, {
         type: 'bar',
@@ -94,7 +69,11 @@ document.addEventListener("DOMContentLoaded", function () {
     startCountdown();
     updateChart(counter);
     activateButtons();
-    fetchData("json/challenges.json");
+    fetchData("json/data.json");
+
+    fetchData2("json/data.json")
+    activateHealthButtons();
+    showBenefit();
 
     async function fetchData(activity) {
         let response = await fetch(activity);
@@ -132,6 +111,43 @@ document.addEventListener("DOMContentLoaded", function () {
         activityDiv.innerHTML = activityList[activityIx];
     }
 
+    async function fetchData2(benefits) {
+        let response = await fetch(benefits);
+        if (response.ok) {
+            let data = await response.json();
+            getBenefits(data);
+        } else {
+            healthDiv.innerHTML = response.status;
+        }
+    }
+
+    function getBenefits(json) {
+        benefitList = json.benefits.map(item => item.description);
+    }
+
+    function activateHealthButtons() {
+        document.querySelector("#leftBtn2").addEventListener("click", prevBenefit);
+
+        document.querySelector("#rightBtn2").addEventListener("click", nextBenefit);
+    }
+
+    function prevBenefit() {
+        if (benefitIx > 0) benefitIx--;
+        else benefitIx = benefitList.length - 1;
+        showBenefit();
+    }
+
+    function nextBenefit() {
+        if (benefitIx < benefitList.length - 1) benefitIx++;
+        else benefitIx = 0;
+        showBenefit();
+    }
+
+    function showBenefit() {
+        healthDiv.innerHTML = benefitList.length
+            ? benefitList[benefitIx] : "<p id='placeholder'>BLÄDDRA BLAND FÖRDELAR</p>";
+    }
+
     function addToCounter() {
         counter++;
 
@@ -139,6 +155,8 @@ document.addEventListener("DOMContentLoaded", function () {
         compareParticipation();
         feedbackAnimation();
         updateChart(counter);
+
+        healthDiv.innerHTML = "<p id='placeholder'>BLÄDDRA BLAND FÖRDELAR</p>";
     }
 
     function updateChart(counter) {

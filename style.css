@@ -41,7 +41,36 @@ section article {
     gap: 10px;
 }
 
-.leftBtn, .rightBtn {
+.leftBtn,
+.rightBtn {
+    flex-shrink: 0;
+    background-color: #3c7bbaba;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 34px;
+    margin: 4px;
+}
+
+#healthDiv {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#healthDiv p {
+    font-size: 30px;
+    color: white;
+}
+
+#healthHeaderDiv {
+    text-align: center;
+    background-color: #3c7bba81;
+    color: white;
+}
+
+#leftBtn2,
+#rightBtn2 {
     flex-shrink: 0;
     background-color: #3c7bbaba;
     color: white;
@@ -77,17 +106,15 @@ section article {
 
 #thirdSecArticle {
     background-color: #3c7bba;
-    flex: 0.1;
+    flex: 1.7;
 }
 
-#thirdSection article:nth-child(2) {
-    background-color: #3c7bbaba;
+#thirdSection .activityContainer {
+    background-color: #3c7bba5b;
+    height: 100%;
 }
 
-#thirdSection article:nth-child(3) {
-    background-color: #3c7bba6f;
-}
-
+/* 
 .toggleBenefits {
     width: 200px;
     height: 140px;
@@ -100,8 +127,8 @@ section article {
     margin: 30px 0px;
     box-shadow: 4px 3px 9px 7px black;
     animation: jiggle 2s ease-in-out infinite;
-}
-
+} */
+/* 
 .toggleBenefits.visible {
     right: -30px;
     width: 80%;
@@ -111,12 +138,11 @@ section article {
 
 .toggleBenefits.slideBack {
     animation: slideBack 1s forwards;
-}
+} */
 
 #benefitContainer {
     background-color: #3c7bba6f;
     flex: 1;
-    overflow: hidden;
 }
 
 header {
@@ -125,8 +151,9 @@ header {
 }
 
 #heartImg {
-    width: 40%;
-    margin-left: 32%;
+    width: 50%;
+    margin-left: 27%;
+    margin-top: 20px;
     animation: pulse 1s infinite;
 }
 
@@ -142,8 +169,21 @@ header {
     margin-bottom: 10px;
 }
 
+#firstSection>article:nth-child(1)>header:nth-child(1) {
+    margin-bottom: -30px;
+}
+
+#thirdSecArticle > header:nth-child(2) > h1:nth-child(1) {
+    margin-top: 70px;
+}
+
 #headerCounter {
     margin-bottom: -45px;
+}
+
+#healthDiv #placeholder {
+    font-size: 50px;
+    text-decoration: underline;
 }
 
 #resElem p {
@@ -208,7 +248,7 @@ p {
     }
 }
 
-@keyframes jiggle {
+/* @keyframes jiggle {
 
     0%,
     100% {
@@ -226,8 +266,8 @@ p {
     75% {
         transform: translateX(-5px);
     }
-}
-
+} */
+/* 
 @keyframes slideIn {
     0% {
         transform: translateX(100%);
@@ -246,4 +286,4 @@ p {
     100% {
         transform: translateX(100%)
     }
-}
+} */
