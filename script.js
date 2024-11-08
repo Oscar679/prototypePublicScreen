@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+    console.log(window.innerWidth, window.innerHeight);
+
     let participateBtn = document.querySelector("#participateBtn");
     let counter = 0;
     let resElem = document.querySelector("#resElem");
