@@ -118,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (response.ok) {
             let data = await response.json();
             getBenefits(data);
+            showBenefit();
         } else {
             healthDiv.innerHTML = response.status;
         }
@@ -146,8 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function showBenefit() {
-        healthDiv.innerHTML = benefitList.length
-            ? benefitList[benefitIx] : "<p id='placeholder'>BLÄDDRA BLAND FÖRDELAR</p>";
+        healthDiv.innerHTML = benefitList[benefitIx];
     }
 
     function addToCounter() {
@@ -158,7 +158,6 @@ document.addEventListener("DOMContentLoaded", function () {
         feedbackAnimation();
         updateChart(counter);
 
-        healthDiv.innerHTML = "<p id='placeholder'>BLÄDDRA BLAND FÖRDELAR</p>";
     }
 
     function updateChart(counter) {

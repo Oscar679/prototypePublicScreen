@@ -39,9 +39,22 @@ section article {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    position: relative;
 }
 
-.leftBtn,
+.leftBtn {
+    flex-shrink: 0;
+    background-color: #3c7bbaba;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 26px;
+    margin: 4px;
+    position: absolute;
+    margin-left: -440px;
+}
+
 .rightBtn {
     flex-shrink: 0;
     background-color: #3c7bbaba;
@@ -49,8 +62,9 @@ section article {
     border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: 34px;
-    margin: 4px;
+    font-size: 26px;
+    margin-left: 440px;
+    position: absolute;
 }
 
 #healthDiv {
@@ -69,7 +83,20 @@ section article {
     color: white;
 }
 
-#leftBtn2,
+#leftBtn2 {
+    flex-shrink: 0;
+    background-color: #3c7bbaba;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 26px;
+    margin: 4px;
+    position: absolute;
+    margin-left: -440px;
+}
+
+
 #rightBtn2 {
     flex-shrink: 0;
     background-color: #3c7bbaba;
@@ -77,45 +104,43 @@ section article {
     border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: 34px;
+    font-size: 26px;
     margin: 4px;
+    position: absolute;
+    margin-left: 440px;
 }
 
-#firstSection article:nth-child(1) {
+#firstSection {
     background-color: #3c7bbaba;
 }
 
-#firstSection article:nth-child(2) {
-    background-color: #3c7bba6f;
-}
-
 #secondSection article:nth-child(1) {
-    background-color: #3c7bbadc;
+    background-color: #3c7bba;
     height: 100%;
 }
 
 #secondSection article:nth-child(2) {
-    background-color: #3c7bba6f;
+    background-color: #3c7bba;
     height: 15%;
 }
 
 #secondSection article:nth-child(3) {
-    background-color: #3c7bbaad;
+    background-color: #3c7bba;
     height: 84%;
+    padding: 15px;
 }
 
 #thirdSecArticle {
-    background-color: #3c7bba;
+    background-color: #3c7bbaad;
     flex: 1.7;
 }
 
 #thirdSection .activityContainer {
-    background-color: #3c7bba5b;
+    background-color: #3c7bbaad;
     height: 100%;
 }
 
 #benefitContainer {
-    background-color: #3c7bba6f;
     flex: 1;
 }
 
@@ -128,7 +153,6 @@ header {
     width: 50%;
     margin-left: 27%;
     margin-top: 20px;
-    animation: pulse 1s infinite;
 }
 
 #counter {
@@ -147,7 +171,7 @@ header {
     margin-bottom: -30px;
 }
 
-#thirdSecArticle > header:nth-child(2) > h1:nth-child(1) {
+#thirdSecArticle>header:nth-child(2)>h1:nth-child(1) {
     margin-top: 70px;
 }
 
@@ -161,9 +185,10 @@ header {
 }
 
 #resElem p {
-    margin-top: 10px;
-    margin-left: 120px;
-    color: black;
+    display: block;
+    margin: auto;
+    padding: 20px;
+    color: white;
     animation: fadeIn 1s;
 }
 
@@ -206,18 +231,4 @@ p {
     opacity: 0;
     visibility: hidden;
     display: none;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.125);
-    }
-
-    100% {
-        transform: scale(1);
-    }
 }
